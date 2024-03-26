@@ -31,12 +31,15 @@ RegisterNumber: 212223080051
 import pandas as pd
 data=pd.read_csv("/content/Placement_Data.csv")
 data.head()
+
 data1=data.copy()
 data1.head()
 data1=data1.drop(["sl_no","salary"],axis=1)
+
 data1.isnull().sum()
+
 data1.duplicated().sum()
-data1
+
 from sklearn.preprocessing import LabelEncoder
 le=LabelEncoder()
 data1["gender"]=le.fit_transform(data1["gender"])
@@ -48,6 +51,7 @@ data1["workex"]=le.fit_transform(data1["workex"])
 data1["specialisation"]=le.fit_transform(data1["specialisation"])
 data1["status"]=le.fit_transform(data1["status"])
 data1
+
 x=data1.iloc[:,:-1]
 x
 y=data1["status"]
