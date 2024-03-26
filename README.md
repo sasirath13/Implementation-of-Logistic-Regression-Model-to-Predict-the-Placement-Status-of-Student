@@ -20,6 +20,11 @@ To write a program to implement the the Logistic Regression Model to Predict the
 PROGRAM
 ```
 /*
+Program to implement the the Logistic Regression Model to Predict the Placement Status of Student.
+Developed by: SASIDHARAN P
+RegisterNumber: 212223080051
+
+/*
 from sklearn.preprocessing import LabelEncoder
 le=LabelEncoder()
 data1["gender"]=le.fit_transform(data1["gender"])
