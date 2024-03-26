@@ -25,6 +25,15 @@ Developed by: SASIDHARAN P
 RegisterNumber: 212223080051
 
 /*
+import pandas as pd
+data=pd.read_csv("/content/Placement_Data.csv")
+data.head()
+data1=data.copy()
+data1.head()
+data1=data1.drop(["sl_no","salary"],axis=1)
+data1.isnull().sum()
+data1.duplicated().sum()
+data1
 from sklearn.preprocessing import LabelEncoder
 le=LabelEncoder()
 data1["gender"]=le.fit_transform(data1["gender"])
